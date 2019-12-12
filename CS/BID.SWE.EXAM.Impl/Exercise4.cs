@@ -17,13 +17,23 @@ namespace BID.SWE.EXAM.Impl
             stream.Write(uniEncoding.GetBytes(message), 0, message.Length);
             //stream.Write(number, 0, message.Length);
 
+            MemoryStream memoryStream = new MemoryStream();
+            BinaryWriter writer = new BinaryWriter(memoryStream);
+            writer.Write("Frohe Weihnachten ");
+            writer.Write((int)42);
+            writer.Write(false);
 
             return stream;
         }
 
         public object Method2(object obj)
         {
-            throw new NotImplementedException();
+            BinaryReader binReader =
+                   new BinaryReader((MemoryStream)obj);
+            int zahl = binReader.ReadInt32();
+
+            string str = binReader.ReadString();
+            return str;
         }
     }
 }

@@ -2,6 +2,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BID.SWE.EXAM.Impl;
 using BID.SWE1.Exam.Interfaces;
 using System;
+using System.IO;
+using System.Text;
 
 namespace BID.SWE.EXAM.Impl
 {
@@ -61,6 +63,18 @@ namespace BID.SWE.EXAM.Impl
         //    Exercise3 ex = new Exercise3();
         //    object[] result = ex.Method2();
         //    CollectionAssert.AreEqual(arr, result);
+        //}
+
+        //[TestMethod]
+        //public void Exercise4Test1()
+        //{
+        //    Exercise4 ex = new Exercise4();
+        //    String message = "Frohe Weihnachten ";
+        //    MemoryStream ms = new MemoryStream();
+        //    ms = ex.Method1();
+        //    StreamReader reader;
+        //    string text = reader.ReadToEnd();
+        //    Assert.AreEqual(message, text);
         //}
     }
 }
