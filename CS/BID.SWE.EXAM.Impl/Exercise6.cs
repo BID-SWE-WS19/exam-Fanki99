@@ -9,11 +9,11 @@ namespace BID.SWE.EXAM.Impl
         public object Method1()
         {
             string name = "Thomas Fankhauser";
-            int tag = DateTime.Now.Day;
-            int monat = DateTime.Now.Month;
-            int jahr = DateTime.Now.Year;
-            int stunde = DateTime.Now.Hour;
-            int minute = DateTime.Now.Minute;
+            int tag = 12;
+            int monat = 12;
+            int jahr = 2019;
+            int stunde = 17;
+            int minute = 12;
             
             string cmdText = "INSERT INTO TestAbgaben (Name,Tag,Monat,Jahr,Stunde,Minute) " +
                 "VALUES(" + name+ ","+  tag.ToString()+ "," + monat.ToString()+ "," + jahr.ToString()+ "," + stunde.ToString()+ "," + minute.ToString() + ");";
