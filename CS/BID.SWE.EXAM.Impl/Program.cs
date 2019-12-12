@@ -7,6 +7,7 @@ namespace BID.SWE.EXAM.Impl
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
         }
     }
 }

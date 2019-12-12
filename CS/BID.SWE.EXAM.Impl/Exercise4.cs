@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using BID.SWE1.Exam.Interfaces;
 
 namespace BID.SWE.EXAM.Impl
@@ -7,7 +9,16 @@ namespace BID.SWE.EXAM.Impl
     {
         public object Method1()
         {
-            throw new NotImplementedException();
+            MemoryStream stream = new MemoryStream();
+            UnicodeEncoding uniEncoding = new UnicodeEncoding();
+            String message = "Frohe Weihnachten ";
+            int number = 42;
+
+            stream.Write(uniEncoding.GetBytes(message), 0, message.Length);
+            //stream.Write(number, 0, message.Length);
+
+
+            return stream;
         }
 
         public object Method2(object obj)
